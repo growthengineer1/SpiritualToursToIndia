@@ -8,6 +8,20 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 **Target Keywords**: spiritual tours to india, spiritual tour to india, spiritual travel india, spiritual journey to india, yoga tours india, meditation retreats india, temple tours india
 
+## Recent Changes
+
+### October 14, 2025 - Analytics & Asset Optimization
+- **Google Tag Manager Installation**: Implemented GTM container (GTM-T65DHKXL) across entire site for analytics and conversion tracking
+  - Head script installed immediately after `<head>` tag on all pages
+  - Noscript iframe installed immediately after `<body>` tag on all pages
+  - Deployed on: index.html + all 6 tour detail pages (golden-triangle, south-india, karnataka, char-dham, buddha-circuit, tamil-nadu-kerala)
+  
+- **Blog Image Migration**: Migrated 7 blog featured images from external Bubble CDN to local hosting
+  - Downloaded images from smukti.com/bubble.io CDN to `attached_assets/blog_images/`
+  - Updated HTML references from external URLs to local paths
+  - Resolved CORS/security policy blocking issues with external CDN images
+  - Affected images: transportation.png, packing.png, health.png, sacred-architecture.png, visa.png, first-time.png, women-safety.png
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.

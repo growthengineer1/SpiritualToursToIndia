@@ -1,5 +1,24 @@
 /* Spiritual Tours to India - Custom CSS */
 
+/* Orange color utilities (Tailwind 2.x doesn't include orange by default) */
+.bg-orange-50 { background-color: #fff7ed; }
+.bg-orange-100 { background-color: #ffedd5; }
+.bg-orange-600 { background-color: #ea580c !important; }
+.bg-orange-700 { background-color: #c2410c !important; }
+.bg-orange-800 { background-color: #9a3412 !important; }
+.bg-orange-900 { background-color: #7c2d12 !important; }
+.text-orange-600 { color: #ea580c !important; }
+.text-orange-700 { color: #c2410c !important; }
+.text-orange-800 { color: #9a3412 !important; }
+.border-orange-600 { border-color: #ea580c !important; }
+.border-orange-300 { border-color: #fdba74 !important; }
+.hover\:bg-orange-700:hover { background-color: #c2410c !important; }
+.hover\:text-orange-700:hover { color: #c2410c !important; }
+
+.from-orange-50 { --tw-gradient-from: #fff7ed; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 247, 237, 0)); }
+.to-amber-50 { --tw-gradient-to: #fffbeb; }
+.from-amber-50 { --tw-gradient-from: #fffbeb; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 251, 235, 0)); }
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;

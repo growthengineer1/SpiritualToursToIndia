@@ -101,11 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const createBackToTop = () => {
         const backToTopBtn = document.createElement('button');
         backToTopBtn.innerHTML = `
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>
         `;
-        backToTopBtn.className = 'fixed bottom-8 right-8 bg-orange-600 text-white p-4 rounded-full shadow-lg hover:bg-orange-700 transition opacity-0 pointer-events-none';
+        backToTopBtn.className = 'fixed bottom-8 right-8 bg-orange-600 text-white p-4 rounded-full shadow-lg hover:bg-orange-700 transition-all duration-200 opacity-0 pointer-events-none z-50';
+        backToTopBtn.setAttribute('aria-label', 'Back to top');
         backToTopBtn.id = 'back-to-top';
         document.body.appendChild(backToTopBtn);
 

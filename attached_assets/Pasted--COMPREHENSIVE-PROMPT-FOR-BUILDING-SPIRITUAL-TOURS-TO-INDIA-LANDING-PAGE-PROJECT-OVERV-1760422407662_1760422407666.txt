@@ -1,0 +1,573 @@
+# COMPREHENSIVE PROMPT FOR BUILDING SPIRITUAL TOURS TO INDIA LANDING PAGE
+
+---
+
+## PROJECT OVERVIEW
+
+Build a high-converting, SEO-optimized static HTML landing page for **spiritualtourstoindia.com** - a planning resource for international travelers researching spiritual tours to India. This is an informational resource that helps users plan their spiritual journey and connects them with tour organizers.
+
+**Primary SEO Keywords**: spiritual tours to india, spiritual tour to india, spiritual travel to india, spiritual journey to india, spiritual tourism india
+
+**Target Audience**: International travelers (USA, Canada, UK, Europe, Australia) aged 30-65, interested in authentic spiritual experiences, yoga, meditation, temple tours, and cultural immersion in India.
+
+---
+
+## TECH STACK & DEPLOYMENT
+
+- **Code Repository**: GitHub
+- **Hosting**: Cloudflare Pages (connected to GitHub repo)
+- **Database/Storage**: Supabase (for images)
+- **Domain**: Cloudflare (spiritualtourstoindia.com)
+- **CSS Framework**: Tailwind CSS via Cloudflare CDN
+- **Deployment**: Auto-deploy on GitHub push via Cloudflare Pages
+
+---
+
+## PROJECT STRUCTURE
+
+```
+spiritual-tours-india/
+├── index.html           # Main landing page
+├── assets/
+│   ├── css/
+│   │   └── custom.css   # Custom styles (if needed beyond Tailwind)
+│   └── js/
+│       └── main.js      # JavaScript for interactivity
+├── README.md
+└── .gitignore
+```
+
+**Important**: Keep the code modular and well-commented so sections can be easily added, removed, or modified. Each section should have clear IDs and be self-contained.
+
+---
+
+## HTML STRUCTURE OVERVIEW
+
+Use semantic HTML5 with clear section IDs:
+- `#header` - Sticky navigation
+- `#hero` - Hero section with main headline and CTAs
+- `#why-india` - Why choose India for spiritual journey
+- `#destinations` - Popular spiritual destinations
+- `#tour-itineraries` - Curated tour packages
+- `#experiences` - Types of spiritual experiences
+- `#testimonials` - Traveler reviews
+- `#travel-resources` - Blog posts grid
+- `#faq` - Frequently asked questions (accordion style)
+- `#consultation-cta` - Call-to-action for booking consultation
+- `#contact` - Contact form and WhatsApp
+- `#footer` - Footer with links
+
+---
+
+## SEO OPTIMIZATION (CRITICAL)
+
+### Meta Tags Required:
+- **Title**: "Spiritual Tours to India: Complete Planning Guide & Curated Itineraries 2025"
+- **Meta Description**: "Plan your spiritual tour to India with expert guidance. Explore curated itineraries including Golden Triangle, South India temples, Char Dham Yatra, Buddha Circuit. Essential travel resources for international spiritual travelers seeking authentic experiences in India."
+- **Keywords**: "spiritual tours to india, spiritual tour to india, spiritual travel india, spiritual journey to india, yoga tours india, meditation retreats india, temple tours india, spiritual tourism india, pilgrimage tours india, spiritual travel packages india"
+- **Open Graph tags** for social sharing
+- **Canonical URL**: https://spiritualtourstoindia.com/
+- **Favicon** link
+- **Schema markup** for TravelAgency
+
+### CSS Framework:
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+```
+
+### Fonts (Optional - Google Fonts):
+- Headings: Lora (serif) - weights 400, 600, 700
+- Body: Inter (sans-serif) - weights 300, 400, 500, 600
+
+---
+
+## SECTION-BY-SECTION CONTENT SPECIFICATIONS
+
+---
+
+### 1. HEADER / NAVIGATION
+
+**Layout**: Fixed/sticky header with white background and shadow
+
+**Elements**:
+- Logo: Text "Spiritual Tours to India" (orange color, bold, 2xl)
+- Desktop Navigation Links (horizontal):
+  - Why India → #why-india
+  - Destinations → #destinations
+  - Tour Options → #tour-itineraries
+  - Travel Resources → #travel-resources
+  - FAQs → #faq
+  - Contact → #contact
+- Primary CTA Button: "Get Planning Help" → https://calendly.com/sabin-smukti/30min (opens new tab)
+- Mobile hamburger menu (toggles mobile navigation)
+
+**Mobile Menu**: Hidden by default, shows/hides on click, includes all nav links + CTA
+
+**JavaScript**: Toggle mobile menu visibility on hamburger icon click; close menu when nav link clicked; smooth scroll behavior
+
+---
+
+### 2. HERO SECTION
+
+**Layout**: Full-screen (h-screen) with background image overlay
+
+**Background Image**: 
+- Varanasi ghats at golden hour (use Unsplash placeholder initially)
+- Dark overlay (50% opacity black) for text readability
+- Comment in code: `<!-- REPLACE WITH SUPABASE URL: Hero background - Varanasi ghats -->`
+
+**Content** (centered, white text):
+
+**H1 Headline**: 
+"Spiritual Tours to India: Your Complete Planning Guide"
+- Font size: 4xl on mobile, 6xl on desktop
+- Bold, leading-tight
+
+**Subheadline**: 
+"Planning a **spiritual tour to India**? Explore curated itineraries from the Golden Triangle to South India temples, Char Dham Yatra to the Buddha Circuit. Find essential travel resources, tour options, and connect with experienced organizers for your **spiritual journey to India**."
+- Font size: xl on mobile, 2xl on desktop
+- Use `<strong>` tags on bolded phrases for SEO
+
+**CTA Buttons** (flex row on desktop, column on mobile):
+1. **Primary**: "Explore Tour Options" 
+   - Smooth scroll to #tour-itineraries
+   - Orange background (bg-orange-600), white text, large padding, rounded
+   - Hover: bg-orange-700
+
+2. **Secondary**: "Get Planning Help"
+   - Link: https://calendly.com/sabin-smukti/30min (new tab)
+   - White background, orange text, large padding, rounded
+   - Hover: bg-gray-100
+
+**Trust Text** (below buttons, small, slightly transparent):
+"Free consultation • Curated group tours available • Perfect for first-time travelers"
+
+**Scroll Indicator**: Bouncing down arrow at bottom center (animate-bounce)
+
+---
+
+### 3. WHY SPIRITUAL TOURS TO INDIA SECTION
+
+**Section Background**: Light amber/cream (bg-amber-50)
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "Why Choose India for Your Spiritual Journey?"
+- Supporting text: "India is the birthplace of **spiritual practices** that have transformed millions of lives worldwide. Discover why **spiritual travel to India** offers experiences found nowhere else on Earth."
+
+**Content Grid**: 2 columns on tablet (md), 3 columns on desktop (lg), 1 column on mobile
+
+**6 Cards** (white background, padding, rounded, shadow, hover effect):
+
+1. **5,000+ Years of Spiritual Civilization**
+   - Icon (temple/bell icon)
+   - Description: India's unbroken spiritual tradition from Vedic period to modern practices, living history
+   
+2. **Diverse Spiritual Traditions**
+   - Icon (people/community icon)
+   - Description: Experience Hinduism, Buddhism, Jainism, Sikhism at their source; multiple enlightenment paths
+   
+3. **Birthplace of Yoga & Meditation**
+   - Icon (meditation/clock icon)
+   - Description: Practice in Rishikesh ashrams, meditation caves; learn from masters with authentic lineages
+   
+4. **Great Masters & Their Teachings**
+   - Icon (book icon)
+   - Description: Buddha, Adi Shankaracharya, Ramana Maharshi; walk where enlightened beings taught
+   
+5. **Sacred Sites & Living Traditions**
+   - Icon (building/temple icon)
+   - Description: Ancient temples, sacred rivers, Himalayan pilgrimage sites; uninterrupted practices for millennia
+   
+6. **Authentic Spiritual Experiences**
+   - Icon (video/camera icon)
+   - Description: Ganga Aarti, temple festivals, ashram stays; immersive transformation beyond tourism
+
+**SEO Note**: Use `<strong>` tags on keywords like "spiritual teachings," "spiritual tours in India," etc.
+
+---
+
+### 4. POPULAR SPIRITUAL DESTINATIONS
+
+**Section Background**: White
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "Sacred Destinations for Spiritual Tours in India"
+- Supporting text: "From the holy ghats of Varanasi to Himalayan temples, explore India's most revered **spiritual destinations** that attract seekers from around the world."
+
+**Grid**: 3 columns desktop, 2 tablet, 1 mobile
+
+**6 Destination Cards** (white, rounded, shadow, hover effect):
+
+Each card includes:
+- Image (h-64, cover, rounded top)
+- Title (H3, bold, 2xl)
+- Description (gray text, leading-relaxed)
+- 3 tags (small pills/badges with orange background)
+
+**Destinations**:
+
+1. **Varanasi - The Spiritual Capital**
+   - Image: Varanasi ghats (comment: REPLACE WITH SUPABASE URL)
+   - Alt text: "Varanasi spiritual tour - ancient ghats and temples on the Ganges"
+   - Description: Experience India's holiest city, witness **Ganga Aarti ceremonies**, explore temples, walk sacred ghats. Essential for any **spiritual tour of India**.
+   - Tags: Temple Tours, River Ceremonies, Ancient Traditions
+
+2. **Rishikesh - Yoga Capital of the World**
+   - Image: Rishikesh yoga/ashram scene
+   - Alt text: "Rishikesh yoga and meditation retreat in the Himalayas"
+   - Description: Nestled in Himalayas, world-class **yoga ashrams**, meditation centers, serene Ganges. Perfect for **yoga tours to India**.
+   - Tags: Yoga Retreats, Meditation, Ashram Stays
+
+3. **Bodh Gaya - Buddha's Enlightenment Site**
+   - Image: Mahabodhi Temple
+   - Alt text: "Bodh Gaya Buddhist pilgrimage site where Buddha attained enlightenment"
+   - Description: Where Buddha attained enlightenment under Bodhi Tree. Mahabodhi Temple, monasteries. Must-visit for **Buddhist pilgrimage tours in India**.
+   - Tags: Buddhist Sites, Meditation, Pilgrimage
+
+4. **Haridwar - Gateway to the Himalayas**
+   - Image: Haridwar Ganga Aarti
+   - Alt text: "Haridwar Ganga Aarti ceremony at Har Ki Pauri ghat"
+   - Description: One of seven holiest cities. Powerful **Ganga Aarti ceremonies**, Har Ki Pauri ghat, holy dips, begin Himalayan **pilgrimage journey**.
+   - Tags: Holy Dip, Aarti Ceremonies, Kumbh Mela
+
+5. **South Indian Temples - Architectural Marvels**
+   - Image: Meenakshi Temple or South temple
+   - Alt text: "South India temple tours - Dravidian architecture and ancient temples"
+   - Description: Stunning Dravidian architecture in Meenakshi (Madurai), Ramanathaswamy (Rameswaram), Kanchipuram. **South India temple tours** offer profound experiences.
+   - Tags: Temple Architecture, Sacred Rituals, Cultural Heritage
+
+6. **Himalayan Sanctuaries - Mountain Spirituality**
+   - Image: Himalayan temple/landscape
+   - Alt text: "Himalayan spiritual retreats - Dharamshala, Kedarnath, Badrinath temples"
+   - Description: Dharamshala, Kedarnath, Badrinath offer profound experiences amid natural beauty. **Himalayan pilgrimage tours** combine adventure with spirituality.
+   - Tags: Mountain Temples, Char Dham, Tibetan Buddhism
+
+---
+
+### 5. CURATED SPIRITUAL TOUR ITINERARIES
+
+**Section Background**: Gradient from orange-50 to amber-50
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "Curated Spiritual Tour Itineraries for India"
+- Supporting text: "Explore our carefully planned **spiritual tour packages for India** covering sacred sites and transformative experiences. Each designed for **international spiritual travelers**."
+
+**Grid**: 2 columns desktop, 1 column mobile
+
+**6 Tour Cards** (white, rounded-xl, shadow, hover effect, padding):
+
+Each card includes:
+- Duration badge (orange background, white text, rounded-full, small)
+- Tour title (H3, 3xl, bold)
+- Brief description paragraph
+- "Tour Highlights" subheading with checkmark icon
+- Bulleted list (4-6 highlights with orange bullet points)
+- "Learn More" button (full width, orange, rounded)
+- Small text below button: "Individual tour page coming soon"
+
+**Tours**:
+
+1. **Golden Triangle Spiritual Tour**
+   - Duration: 7-10 Days
+   - Description: Explore Delhi, Agra, Jaipur's spiritual heritage beyond tourist trail. **Golden Triangle tour** focuses on sacred sites, temples, spiritual experiences.
+   - Highlights:
+     • Delhi's spiritual sites: Akshardham, Lotus Temple, Gurudwara Bangla Sahib
+     • Taj Mahal and Agra's spiritual heritage
+     • Jaipur's ancient temples and Jantar Mantar observatory
+     • Optional: Pushkar's sacred lake and Brahma Temple
+
+2. **South India Temple Tour**
+   - Duration: 10-14 Days
+   - Description: Journey through **South India's magnificent temples**, Dravidian architecture, ancient rituals, profound spiritual energy in Tamil Nadu, Karnataka, Kerala.
+   - Highlights:
+     • Meenakshi Amman Temple, Madurai - architectural masterpiece
+     • Ramanathaswamy Temple, Rameswaram - holiest sites
+     • Kanchipuram's 1,000 temples and silk heritage
+     • Shore Temple and cave temples at Mahabalipuram (UNESCO)
+     • Tirupati Balaji Temple darshan
+
+3. **Tamil Nadu & Kerala Spiritual Journey**
+   - Duration: 12-15 Days
+   - Description: Combine **Tamil Nadu's ancient temples** with **Kerala's Ayurveda and wellness**. Temple festivals, traditional healing, serene backwaters.
+   - Highlights:
+     • Tamil Nadu's ancient Dravidian temples and sacred sites
+     • Auroville spiritual community near Pondicherry
+     • Kerala's serene backwaters and traditional houseboats
+     • Authentic Ayurveda treatments and wellness centers
+     • Temple festivals, kathakali performances, cultural immersion
+     • Guruvayur Temple and Kerala's spiritual heritage
+
+4. **Karnataka Spiritual Discovery**
+   - Duration: 8-10 Days
+   - Description: Explore Karnataka's diverse spiritual heritage from **Hampi's ancient ruins** to coastal temple towns, Jain monuments, vibrant Hindu traditions.
+   - Highlights:
+     • Hampi's magnificent temple ruins and Vijayanagara Empire (UNESCO)
+     • Gokarna's pristine beaches and ancient Shiva temples
+     • Shravanabelagola's towering Jain Bahubali statue
+     • Mysore Palace, temples, and yoga traditions
+     • Udupi Krishna Temple and coastal Karnataka spirituality
+
+5. **Char Dham Yatra - Himalayan Pilgrimage**
+   - Duration: 12-14 Days
+   - Description: India's most sacred **Himalayan pilgrimage** visiting four ancient temples. **Char Dham Yatra** is profound journey through mountain landscapes.
+   - Highlights:
+     • Yamunotri Temple - source of sacred Yamuna River
+     • Gangotri Temple - source of holy Ganges
+     • Kedarnath Temple - Lord Shiva's shrine at 3,583m
+     • Badrinath Temple - Lord Vishnu's abode in Himalayas
+     • Stunning Himalayan scenery and mountain spirituality
+   - Note box: "Moderate to high physical fitness required. Best season: May-June and September-October."
+
+6. **Buddha Circuit Tour - Buddhist Pilgrimage**
+   - Duration: 8-10 Days
+   - Description: Follow Buddha's footsteps through **India's most important Buddhist pilgrimage sites**. Experience **Buddha Circuit** from enlightenment to parinirvana.
+   - Highlights:
+     • Bodh Gaya - Buddha's enlightenment under Bodhi Tree
+     • Sarnath - Buddha's first sermon after enlightenment
+     • Kushinagar - Buddha's Mahaparinirvana
+     • Lumbini, Nepal - Buddha's birthplace (day trip)
+     • Rajgir and Nalanda - ancient Buddhist universities
+     • Meditation sessions and teachings from monks
+
+**Bottom CTA** (centered):
+- Text: "Can't find the perfect itinerary? We create **customized spiritual tour packages** based on your interests and preferences."
+- Button: "Schedule a Free Consultation" → https://calendly.com/sabin-smukti/30min (new tab)
+
+---
+
+### 6. TYPES OF SPIRITUAL EXPERIENCES
+
+**Section Background**: White
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "Spiritual Experiences in India"
+- Supporting text: "Beyond temple visits, **spiritual tours in India** offer diverse transformative experiences from **yoga retreats** to sacred ceremonies."
+
+**Grid**: 3 columns desktop, 2 tablet, 1 mobile
+
+**7 Experience Cards** (centered text, icon, gradient background from orange-50 to white, rounded, shadow):
+
+Each card includes:
+- Large circular icon container (orange-100 background, orange-600 icon)
+- Title (H3, 2xl, bold)
+- Description paragraph
+
+**Experiences**:
+
+1. **Temple Pilgrimages**
+   - Icon: Temple/building
+   - Description: Visit ancient temples and participate in sacred rituals. Experience **temple darshan**, aarti ceremonies, traditional worship practices across India's diverse spiritual sites.
+
+2. **Yoga & Meditation Retreats**
+   - Icon: Meditation/lotus
+   - Description: Learn from experienced teachers in authentic ashrams. **Yoga retreats in India** offer immersive practices in Rishikesh, Kerala, and centers where disciplines originated.
+
+3. **Ayurveda & Wellness**
+   - Icon: Wellness/hands
+   - Description: Experience traditional healing and rejuvenation. **Ayurveda treatments in India** combine ancient wisdom with wellness practices for physical, mental, spiritual health.
+
+4. **Buddhist Trail Journeys**
+   - Icon: Book/scroll
+   - Description: Follow Buddha's path to enlightenment. **Buddhist pilgrimage tours** visit sacred sites including Bodh Gaya, Sarnath, ancient monasteries where Buddhism flourished.
+
+5. **Ganga Aarti Ceremonies**
+   - Icon: Fire/flame
+   - Description: Witness mesmerizing river worship ceremonies. **Ganga Aarti** in Varanasi and Haridwar offers powerful experiences with fire offerings, chanting, devotional music at sunset.
+
+6. **Festival Participation**
+   - Icon: Calendar/celebration
+   - Description: Experience Diwali, Holi, Kumbh Mela, regional festivals. **Spiritual festivals in India** offer vibrant cultural immersion and participation in ancient celebrations with devotion and joy.
+
+7. **Ashram Experiences**
+   - Icon: Person/user
+   - Description: Live the spiritual life in traditional Indian ashrams. **Ashram stays** offer immersive experiences with meditation, yoga, vegetarian meals, teachings from spiritual masters.
+
+---
+
+### 7. TRAVELER TESTIMONIALS
+
+**Section Background**: Gradient from amber-50 to orange-50
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "What Travelers Say About Spiritual Tours to India"
+- Supporting text: "Hear from international travelers who experienced **spiritual journeys to India** and found transformation, safety, authentic cultural connections."
+
+**Grid**: 3 columns desktop, 2 tablet, 1 mobile
+
+**8 Testimonial Cards** (white, rounded-xl, shadow, padding):
+
+Each card includes:
+- 5-star rating (yellow stars at top)
+- Testimonial quote (italic, gray text, leading-relaxed)
+- Avatar circle with initials (orange background, white text, bold)
+- Name (bold, gray-800)
+- Country with flag emoji (small, gray-600)
+
+**Special styling**: Cards #3 and #7 have orange border (border-2 border-orange-300) and badge at top saying "SMUKTI GROUP TOUR" (orange-100 bg, orange-800 text, small, rounded-full)
+
+**Testimonials**:
+
+1. **Sarah M. - Germany 🇩🇪** (First-timer, North India)
+   "I was nervous about traveling to India for the first time, but the cultural guidance made all the difference. The tour through Rajasthan's temples and Varanasi was life-changing. I never felt unsafe and learned so much about respecting local customs. Highly recommend for first-timers!"
+
+2. **Jean-Pierre D. - France 🇫🇷** (South India, food concerns)
+   "The South India temple tour exceeded all expectations. From Madurai to Mahabalipuram, every temple told a story. Our guide's knowledge of Hindu philosophy and temple architecture was incredible. The food recommendations were spot-on—I never got sick and discovered amazing flavors."
+
+3. **Michael T. - USA 🇺🇸** [SMUKTI GROUP TOUR - Special styling]
+   "I joined Smukti's 'Discovering Shiva' group tour and it was absolutely perfect. They took care of everything—accommodations, transportation, cultural etiquette. As a first-time traveler to India seeking authentic spiritual experiences, I couldn't have asked for a better introduction. The group dynamic was wonderful, and I felt completely safe throughout."
+
+4. **Rebecca L. - Canada 🇨🇦** (Both regions)
+   "Visiting both North and South India gave me a complete picture of the country's spiritual diversity. From the Himalayan temples to Kerala's ashrams, each region offered something unique. The planning resources and pre-trip guidance were invaluable. India is now my soul home."
+
+5. **Emma W. - Australia 🇦🇺** (Solo female traveler, safety)
+   "As a solo female traveler, I had concerns about safety. The detailed guidance on dress codes, temple etiquette, and navigating cities put me at ease. The spiritual journey through Rishikesh and Haridwar was transformative. I connected with amazing people and never felt alone."
+
+6. **David K. - South Africa 🇿🇦** (Buddha Circuit)
+   "The Buddha Circuit tour was a pilgrimage I'll never forget. Walking where Buddha walked, meditating at Bodh Gaya, and learning from Buddhist monks—it deepened my practice immensely. The logistics were handled seamlessly, allowing me to focus purely on the spiritual experience."
+
+7. **Aminata S. - Senegal 🇸🇳** [SMUKTI GROUP TOUR - Special styling]
+   "I joined Smukti's 'Spiritual Journey through South India' 15-day tour and it was extraordinary! The team's attention to detail, cultural sensitivity, and genuine care for our experience made this trip flawless. Perfect for first-time travelers—they thought of everything. I'm already planning my return trip."
+
+8. **Thomas B. - USA 🇺🇸** (Char Dham, physical challenge)
+   "The Char Dham Yatra was physically challenging but spiritually rewarding beyond words. The high-altitude temples, Himalayan scenery, and sense of accomplishment created a profound transformation. Having experienced guides who understood both the spiritual significance and practical challenges made it possible."
+
+---
+
+### 8. ESSENTIAL TRAVEL RESOURCES (BLOG SECTION)
+
+**Section Background**: White
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "Essential Travel Resources for India"
+- Supporting text: "Everything **international travelers** need to know before their **spiritual tour to India**. From visas to safety tips, we've got you covered."
+
+**Grid**: 3 columns desktop, 2 tablet, 1 mobile
+
+**10 Blog Post Cards** (white, rounded-xl, shadow, hover effect):
+
+Each card includes:
+- Featured image (h-48, cover, rounded-top)
+- Title (H3, xl, bold, leading-tight)
+- Brief description (small, gray, leading-relaxed)
+- "Read More" link with arrow icon (orange, hover effect)
+
+**Blog Posts** (all links open in new tab with rel="noopener"):
+
+1. **India SIM Card & Internet Guide for International Travelers: Complete Connectivity Setup 2025**
+   - URL: https://smukti.com/blog/india-sim-card--internet-guide-for-international-travelers-complete-connectivity-setup-2025
+   - Image: Mobile/SIM card (comment: REPLACE WITH SUPABASE URL)
+   - Alt: "India SIM card guide for international travelers"
+   - Description: "Stay connected throughout your spiritual journey. Learn how to get an Indian SIM card, set up mobile data, and maintain connectivity during your travels."
+
+2. **India Scams to Avoid: How to Spot Tourist Traps & Stay Safe (2025)**
+   - URL: https://smukti.com/blog/-india-scams-to-avoid-how-to-spot-tourist-traps--stay-safe-2025
+   - Image: Safety/awareness
+   - Alt: "How to avoid scams and tourist traps in India"
+   - Description: "Learn to identify common scams and tourist traps. Essential safety information for international travelers visiting India for the first time."
+
+3. **India Food Guide: What to Eat, What to Avoid & How to Order**
+   - URL: https://smukti.com/blog/india-food-guide-what-to-eat-what-to-avoid--how-to-order
+   - Image: Indian food/thali
+   - Alt: "India food guide - what to eat and how to order safely"
+   - Description: "Navigate Indian cuisine with confidence. Discover authentic dishes, food safety tips, and how to order vegetarian meals during your spiritual journey."
+
+4. **India Transportation Guide for International Travelers: Trains, Flights, Bus, Tuk-Tuks & Uber Tips**
+   - URL: https://smukti.com/blog/india-transportation-guide-for-international-travelers-trains-flights-bus-tuk-tuks-uber-tips
+   - Image: Indian train/transport
+   - Alt: "India transportation guide - trains flights buses for travelers"
+   - Description: "Master India's transportation system. From booking train tickets to using Uber and navigating airports, learn how to get around safely and efficiently."
+
+5. **India Packing List 2025: What to Pack (and What NOT to Bring)**
+   - URL: https://smukti.com/blog/india-packing-list-2025-what-to-pack-and-what-not-to-bring
+   - Image: Travel packing/luggage
+   - Alt: "India packing list for spiritual travelers"
+   - Description: "Pack smart for your spiritual tour. Essential items for temples, clothing guidelines, what to leave at home, and season-specific recommendations."
+
+6. **How to Avoid Getting Sick in India: Food, Water & Health Safety**
+   - URL: https://smukti.com/blog/how-to-avoid-getting-sick-in-india-food-water--health-safety
+   - Image: Health/water bottle
+   - Alt: "Health and safety tips for India travel"
+   - Description: "Stay healthy during your journey. Practical tips on food safety, water purification, common illnesses, and what medications to bring."
+
+7. **The Sacred Architecture of Indian Scriptures: A Complete Guide**
+   - URL: https://smukti.com/blog/the-sacred-architecture-of-indian-scriptures-a-complete-guide
+   - Image: Ancient scriptures/manuscripts
+   - Alt: "Guide to ancient Indian scriptures and spiritual texts"
+   - Description: "Understand India's spiritual foundation. Explore Vedas, Upanishads, Bhagavad Gita, Buddhist sutras, and their relevance to your spiritual journey."
+
+8. **India Visa Guide 2025: E-Visa Application Process & Requirements**
+   - URL: https://smukti.com/blog/india-visa-guide-2025-e-visa-application-process--requirements
+   - Image: Visa/passport
+   - Alt: "India e-visa application guide for tourists"
+   - Description: "Navigate the visa process easily. Step-by-step guide to applying for India e-visa, requirements, processing times, and common issues."
+
+9. **Traveling to India for the First Time: Complete Guide (2025)**
+   - URL: https://smukti.com/blog/traveling-to-india-for-the-first-time-complete-guide-2025
+   - Image: India landmarks/travelers
+   - Alt: "First time travel guide to India"
+   - Description: "Your comprehensive first-timer's guide. Everything you need to know about culture, customs, etiquette, and what to expect on your first trip to India."
+
+10. **Traveling to India as a Woman: Safety Guide & Tips (2025)**
+    - URL: https://smukti.com/blog/traveling-to-india-as-a-woman-safety-guide--tips-2025
+    - Image: Female traveler
+    - Alt: "Women's safety guide for traveling in India"
+    - Description: "Essential safety guide for women travelers. Dress codes, harassment prevention, safe accommodation, transportation tips, and cultural insights."
+
+---
+
+### 9. FAQ SECTION
+
+**Section Background**: White
+**Padding**: py-20
+
+**Heading** (centered):
+- H2: "Frequently Asked Questions"
+- Supporting text: "Common questions about planning your **spiritual tour to India**"
+
+**Layout**: Accordion style (collapsible questions) OR two-column layout with expandable items
+
+**JavaScript Required**: Click question to expand/collapse answer. Use smooth transitions.
+
+**15 FAQs** (Question as bold heading, answer hidden/collapsed by default):
+
+1. **What is the best time to visit India for a spiritual tour?**
+   
+   October to March (winter months) offer the most pleasant weather for exploring temples, ghats, and outdoor spiritual sites. Special festivals like Diwali, Holi, and Kumbh Mela provide unique spiritual experiences. Summer months (April-June) are ideal for Himalayan spiritual destinations like Rishikesh and Dharamshala.
+
+2. **Do I need a visa to visit India?**
+   
+   Yes, most international travelers need a visa. The e-Visa is available for citizens of 150+ countries and can be applied online. Tourist e-Visas are typically valid for 30-90 days. For detailed guidance, check our [India Visa Guide] (link to visa blog).
+
+3. **Is India safe for solo travelers and women?**
+   
+   India is generally safe for travelers who take standard precautions. However, cultural differences and navigation can be challenging for first-time visitors. **Smukti's curated group tours are specifically designed for international travelers and include cultural integration support, so you don't have to worry about safety or accidentally disrespecting local customs.** For women travelers, we recommend reading our Women's Safety Guide. Group tours are perfect for first-timers seeking a spiritual experience without the stress of managing logistics alone.
+
+4. **What should I pack for a spiritual tour in India?**
+   
+   Modest, comfortable clothing that covers shoulders and knees for temple visits, comfortable walking shoes (you'll be doing a lot of walking and climbing stairs), lightweight scarf or shawl for temple head coverings. Check our complete [India Packing List 2025] (link to packing blog).
+
+5. **How much does a spiritual tour to India cost?**
+   
+   Spiritual tours typically range from $1,500 to $4,000+ depending on duration, accommodation level, and inclusions. Budget tours (basic accommodation): $100-150 per day. Mid-range tours: $150-250 per day. Luxury spiritual experiences: $300+ per day. Prices usually include accommodation, transportation, guides, and some meals.
+
+6. **Do I need any vaccinations before traveling to India?**
+   
+   Recommended vaccinations include Hepatitis A, Typhoid, and routine vaccinations. Some travelers also get Hepatitis B, Japanese Encephalitis, and Rabies depending on their itinerary. Consult your doctor at least 4-6 weeks before travel. Read our [Health & Safety Guide] (link to health blog) for comprehensive information.
+
+7. **What about food and water safety?**
+   
+   Always drink bottled or filtered water. Start with milder foods and gradually try spicier dishes. Eat at busy, popular restaurants where food turnover is high. **Smukti group tours include guidance on safe eating practices and recommendations for authentic yet safe dining experiences.** Check our [India Food Guide] (link to food blog) for detailed tips.
+
+8. **Can vegetarians/vegans easily find food in India?**
+   
+   Absolutely! India is one of the most vegetarian-friendly countries in the world. Many spiritual sites and ashrams serve only vegetarian (sattvic) food. Vegan options are widely available, though dairy is common in Indian cuisine. Just learn to say "no milk/ghee/butter" in your requests.
+
+9. **What is the dress code for temples and spiritual sites?**
+   
+   Modest clothing is essential: covered shoulders, knees, and sometimes heads. Remove shoes before entering temples (socks are helpful). Some temples require specific att

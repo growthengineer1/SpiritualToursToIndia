@@ -1,0 +1,152 @@
+# Spiritual Tours to India - Landing Page
+
+## Overview
+
+A high-converting, SEO-optimized static HTML landing page designed to help international travelers (primarily from USA, Canada, UK, Europe, and Australia) research and plan spiritual tours to India. The site serves as an informational resource that connects users with tour organizers through consultation bookings and contact forms.
+
+**Primary Purpose**: Generate qualified leads for spiritual tour packages by providing curated itineraries, destination guides, and travel resources.
+
+**Target Keywords**: spiritual tours to india, spiritual tour to india, spiritual travel india, spiritual journey to india, yoga tours india, meditation retreats india, temple tours india
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### Frontend Architecture
+
+**Static Site Approach**
+- Pure HTML5/CSS/JavaScript with no build tools or frameworks
+- Mobile-first responsive design using Tailwind CSS utility classes
+- Semantic HTML5 markup for SEO optimization
+- Custom CSS extends Tailwind for specific design requirements
+
+**Rationale**: Static HTML provides maximum performance, simplicity, and SEO benefits for a landing page. No backend processing needed since this is purely informational with external service integrations for forms and bookings.
+
+### Content Structure
+
+**12-Section Landing Page Layout**
+1. Sticky header navigation
+2. Hero section with primary CTA
+3. Value proposition (Why India)
+4. Destination showcase
+5. Curated tour itineraries
+6. Spiritual experience types
+7. Social proof (testimonials)
+8. Travel resources/blog preview
+9. FAQ accordion
+10. Consultation CTA
+11. Contact form
+12. Footer
+
+**Design Pattern**: Long-form landing page optimized for conversion, with progressive disclosure of information and multiple conversion points throughout the scroll journey.
+
+### Styling Approach
+
+**Tailwind CSS via CDN**
+- Utility-first CSS framework loaded from Cloudflare CDN
+- No build process required
+- Custom CSS file (`assets/css/custom.css`) for extended styles beyond Tailwind utilities
+
+**Typography Stack**:
+- Headings: 'Lora' (serif, elegant for spiritual theme)
+- Body: 'Inter' (sans-serif, optimized for readability)
+- Loaded via Google Fonts
+
+**Rationale**: CDN approach eliminates build complexity while providing full Tailwind functionality. Custom fonts enhance brand personality appropriate for spiritual/cultural content.
+
+### Interactive Features
+
+**Vanilla JavaScript Implementation**
+- Mobile hamburger menu toggle
+- FAQ accordion with smooth animations
+- Smooth scroll with header offset compensation
+- No framework dependencies
+
+**Animation Strategy**: CSS transitions for performance, JavaScript only for state management. Scroll-reveal animations use CSS transforms for GPU acceleration.
+
+### SEO Architecture
+
+**On-Page Optimization**
+- Semantic HTML5 structure with proper heading hierarchy
+- Comprehensive meta tags (description, keywords, Open Graph, Twitter Cards)
+- Schema.org structured data (TravelAgency type)
+- Canonical URL specification
+- Strategic internal anchor linking with scroll offset
+
+**Rationale**: Static HTML enables perfect SEO control. Schema markup helps search engines understand the business type and improves rich snippet potential.
+
+### Asset Management
+
+**Image Strategy**
+- Primary images hosted on Supabase storage
+- Optimized for web delivery
+- Responsive image considerations for mobile
+
+**Rationale**: Supabase provides reliable CDN-backed storage without managing separate image infrastructure. Keeps repository lightweight.
+
+## External Dependencies
+
+### Hosting & Deployment
+
+**Cloudflare Pages**
+- Git-based continuous deployment
+- Automatic deployment triggered by GitHub pushes
+- Global CDN distribution
+- SSL/TLS included
+
+**GitHub Repository**
+- Source code version control
+- Triggers Cloudflare Pages deployments
+
+**Rationale**: Cloudflare Pages offers zero-config deployment with excellent performance for static sites. GitHub integration enables version control and automated deployment workflows.
+
+### Domain & DNS
+
+**Cloudflare DNS**
+- Domain: spiritualtourstoindia.com
+- DNS management through Cloudflare
+
+### Third-Party Service Integrations
+
+**Calendly**
+- Consultation booking system
+- Link: https://calendly.com/sabin-smukti/30min
+- Opens in new tab for 30-minute consultation scheduling
+
+**WhatsApp Business**
+- Quick messaging option for user inquiries
+- Phone: +918807070819
+- Direct mobile communication channel
+
+**Supabase**
+- Image storage and delivery
+- No database or backend API usage
+- CDN-backed asset hosting only
+
+**Email Service**
+- Contact email: namaste@smukti.com
+- Form submissions likely handled client-side or via external form service
+
+### CSS & Font Dependencies
+
+**Tailwind CSS**
+- Version: 2.2.19
+- Delivery: Cloudflare CDN
+- URL: https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css
+
+**Google Fonts**
+- Lora (serif): weights 400, 600, 700
+- Inter (sans-serif): weights 300, 400, 500, 600
+- Preconnect optimization for performance
+
+**Rationale**: CDN delivery eliminates build tools while maintaining fast load times. Font preconnect reduces latency for typography loading.
+
+### Browser APIs
+
+**Native Web APIs Used**
+- Smooth Scroll API
+- DOM Manipulation APIs
+- Event Listeners (click, scroll)
+- LocalStorage (potential for form data persistence)

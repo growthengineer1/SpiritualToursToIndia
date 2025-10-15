@@ -15,7 +15,7 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 - **Featured Group Tour Section Added**: "Discovering Shiva" prominently displayed in Tour Options
   - Featured badge with star icon to highlight special group tour
   - Large featured card layout with Nataraja image
-  - Tour highlights: 10-day experience, Chidambaram/Thanjavur/Madurai temples, cosmic dance ceremonies
+  - Tour highlights: 10-day experience, Chidambaram/Thanjavur/Tiruvannamalai temples, cosmic dance ceremonies
   - Fixed departure dates displayed: Nov 7-16 2025, Dec 5-14 2025, Jan 21-30 2026, Feb 6-15 2026
   - Two CTAs: "Book This Tour" (primary orange) and "Learn More" (secondary outline)
   - Links to: https://smukti.com/spiritual-tours/discovering-shiva

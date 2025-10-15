@@ -10,7 +10,13 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
-### October 15, 2025 - Image Path Fix for Production Deployment
+### October 15, 2025 - Image Optimization & Path Fix for Production
+- **Image Optimization - WebP Conversion**: Resolved mobile loading issues with oversized images
+  - Converted 7 blog images from PNG to WebP format
+  - File size reduction: 712KB-2.0MB → 23KB-138KB (90-95% smaller)
+  - Images now load instantly on mobile devices and slow connections
+  - All modern browsers support WebP (Chrome, Safari, Firefox, Edge)
+
 - **Critical Fix - Absolute Image Paths**: Resolved blog images not displaying on production site
   - Changed all image paths from relative (`attached_assets/...`) to absolute (`/attached_assets/...`)
   - Fixed 25 image references: 18 stock images (testimonials + blogs 1-3) + 7 blog images (blogs 4-10)

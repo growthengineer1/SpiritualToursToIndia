@@ -3,7 +3,7 @@ modules = ["web", "python-3.11"]
 
 [nix]
 channel = "stable-24_11"
-packages = ["static-web-server"]
+packages = ["static-web-server", "imagemagick"]
 
 [deployment]
 publicDir = "/"
@@ -53,6 +53,10 @@ externalPort = 80
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 33463
+externalPort = 3001
 
 [[ports]]
 localPort = 34613

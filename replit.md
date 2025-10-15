@@ -56,3 +56,50 @@ Images are hosted on Supabase storage, optimized for web delivery, and consider 
 ### Browser APIs
 
 Native Web APIs are used, including Smooth Scroll API, DOM Manipulation APIs, and Event Listeners (click, scroll).
+
+## Recent Changes
+
+### October 15, 2025 - Image Optimizations & Updates
+
+- **Himalayan Sanctuaries Image Updated**: Replaced with stunning Kedarnath temple photo
+  - Previous: Generic Unsplash Himalayan landscape
+  - New: Kedarnath temple with snow-capped Himalayan peaks and marigold garlands
+  - Massive optimization: 1.9MB PNG → 218KB WebP (88.8% reduction!)
+  - Shows authentic Himalayan pilgrimage site with dramatic mountain backdrop
+  - Image path: `/attached_assets/kedarnath_himalayan.webp`
+
+- **Varanasi Destination Image Updated**: Replaced with new authentic photo of Varanasi ghats
+  - Previous: Generic stock photo
+  - New: Authentic Varanasi ghats and temples image
+  - Converted to WebP format for optimization (385KB JPEG → 241KB WebP, 37% reduction)
+  - Added object-center positioning for better cropping at 256px height
+  - Image path: `/attached_assets/varanasi_new.webp`
+
+- **Hero Banner Image Replaced**: New authentic group photo showing international travelers at South Indian temple
+  - Previous: Indian flag/Varanasi ghats generic image
+  - New: Real photo of foreigners in traditional white clothes with orange garlands at temple ceremony
+  - Better represents target audience (international spiritual travelers)
+  - Shows authentic spiritual experience visitors can expect
+  - Image path: `/attached_assets/Foreigners in South INdia Temple_1760509121835.png`
+
+- **Featured Group Tour Section Added**: "Discovering Shiva" prominently displayed in Tour Options
+  - Featured badge with star icon to highlight special group tour
+  - Large featured card layout with Nataraja image
+  - Tour highlights: 10-day experience, Chidambaram/Thanjavur/Tiruvannamalai temples, cosmic dance ceremonies
+  - Fixed departure dates displayed: Nov 7-16 2025, Dec 5-14 2025, Jan 21-30 2026, Feb 6-15 2026
+  - Two CTAs: "Book This Tour" (primary orange) and "Learn More" (secondary outline)
+  - Links to: https://smukti.com/spiritual-tours/discovering-shiva
+  - Trust indicator: "Limited spots • Small group (max 12 travelers)"
+  - Responsive design with image on left, content on right
+
+- **XML Sitemap Created**: Full sitemap.xml for Google Search Console submission
+  - Includes homepage and all 6 tour detail pages
+  - Properly formatted with absolute URLs, lastmod dates, changefreq, priority
+  - Accessible at: https://spiritualtourstoindia.com/sitemap.xml
+  - robots.txt created with sitemap reference
+  - Ready for Google Search Console submission
+
+- **Button Hover Fix**: Fixed "Explore Tour Options" button text visibility
+  - Added missing `.hover\:text-orange-600:hover` CSS class
+  - Text now properly displays in orange on white background when hovered
+  - Fixed in: assets/css/custom.css

@@ -12,6 +12,14 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ### October 15, 2025 - Image Optimization & Path Fix for Production
 
+- **Logo & Favicon Implementation**: Added custom brand logo to site
+  - Generated favicon files in multiple sizes (16x16, 32x32, 192x192, 512x512)
+  - Added favicon link tags to HTML <head> for all devices and browsers
+  - Integrated logo in header alongside site name with proper sizing (48x48px)
+  - Logo features India map with Om symbol and compass in maroon/orange colors
+  - All assets stored in `assets/images/` directory
+  - Verified favicon and logo loading with 200 status codes
+
 - **New Blog Posts Added**: Expanded Travel Resources section from 10 to 12 blog posts
   - Added Blog 11: "A Beginner's Guide to Visiting Shiva Temples in South India"
   - Added Blog 12: "How Indian Spirituality Differs from Western Mindfulness Practices"

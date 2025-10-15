@@ -17,6 +17,7 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
   - Added favicon link tags to HTML <head> for all devices and browsers
   - Integrated logo in header alongside site name with proper sizing (48x48px)
   - Logo features India map with Om symbol and compass in maroon/orange colors
+  - Updated to cropped version removing excess background space (775KB → 324KB)
   - All assets stored in `assets/images/` directory
   - Verified favicon and logo loading with 200 status codes
 

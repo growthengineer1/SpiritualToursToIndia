@@ -13,6 +13,7 @@
 .border-orange-600 { border-color: #ea580c !important; }
 .border-orange-300 { border-color: #fdba74 !important; }
 .hover\:bg-orange-700:hover { background-color: #c2410c !important; }
+.hover\:text-orange-600:hover { color: #ea580c !important; }
 .hover\:text-orange-700:hover { color: #c2410c !important; }
 
 .from-orange-50 { --tw-gradient-from: #fff7ed; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 247, 237, 0)); }

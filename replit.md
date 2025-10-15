@@ -10,6 +10,20 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
+### October 15, 2025 - Image Hosting & Permissions Fix
+- **Blog Images Permissions Fix**: Resolved accessibility issue with blog images in Python HTTP server
+  - Set directory permissions to 755 on `attached_assets/blog_images/`
+  - All 7 blog images now accessible and loading correctly
+  - Verified via server logs (200 status codes)
+  
+- **Image Hosting Architecture Clarification**: 
+  - Confirmed Replit App Storage blueprint is incompatible with static HTML sites (requires Node.js/TypeScript backend)
+  - Current working setup uses local storage + external CDN approach:
+    - 18 stock images in `attached_assets/stock_images/` (testimonials, blog posts 1-3)
+    - 7 blog images in `attached_assets/blog_images/` (blog posts 4-10)
+    - 12 destination/tour images from Unsplash CDN (external)
+  - All images verified working with proper permissions
+
 ### October 14, 2025 - Analytics & Asset Optimization
 - **Google Tag Manager Installation**: Implemented GTM container (GTM-T65DHKXL) across entire site for analytics and conversion tracking
   - Head script installed immediately after `<head>` tag on all pages

@@ -13,12 +13,19 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 ### October 15, 2025 - Image Optimization & Path Fix for Production
 
 - **Destination Image Replacement**: Fixed incorrect destination images with accurate stock photos
-  - Replaced 3 destination card images with location-appropriate photos
+  - Replaced 4 destination card images with location-appropriate photos
   - Varanasi: Changed from VW bus on beach → Ganges ghats with temples (421KB → 279KB WebP)
-  - Rishikesh: Changed from generic mountains → people practicing yoga/meditation (182KB → 61KB WebP)  
+  - Rishikesh: Changed from generic mountains → Ganges river with ashrams (323KB → 211KB WebP)  
   - Bodh Gaya: Changed from Taj Mahal → Mahabodhi Temple (148KB → 62KB WebP)
-  - All images converted to WebP format for 58-66% file size reduction
+  - Haridwar: Changed from India Gate → Ganga Aarti ceremony (367KB WebP)
+  - All images converted to WebP format for optimized file sizes
   - Stored locally in `attached_assets/stock_images/` with absolute paths
+  - Verified all loading with 200 status codes
+
+- **Tour Itinerary Images Added**: Fixed missing images in tour section
+  - South India Temple Tour: Added Meenakshi Temple image (340KB WebP)
+  - Buddha Circuit Tour: Added Buddha statue at Bodh Gaya (62KB WebP)
+  - Both converted to WebP format and hosted locally
   - Verified all loading with 200 status codes
 
 - **Logo & Favicon Implementation**: Added custom brand logo to site

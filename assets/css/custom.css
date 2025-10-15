@@ -95,13 +95,8 @@ img {
     transition: opacity 0.3s ease;
 }
 
-img[loading="lazy"] {
-    opacity: 0;
-}
-
-img[loading="lazy"].loaded {
-    opacity: 1;
-}
+/* Removed opacity: 0 rule that was hiding lazy-loaded images
+   Images will lazy-load natively without fade-in animation */
 
 /* Custom scrollbar (optional) */
 ::-webkit-scrollbar {

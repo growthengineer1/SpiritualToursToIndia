@@ -46,7 +46,7 @@ Images are hosted on Supabase storage, optimized for web delivery, and consider 
 *   **Calendly**: For consultation bookings (https://calendly.com/sabin-smukti/30min).
 *   **WhatsApp Business**: For quick messaging (+918807070819).
 *   **Supabase**: Used solely for image storage and delivery (CDN-backed asset hosting).
-*   **Email Service**: For contact (namaste@smukti.com).
+*   **Email Service**: For contact (hello@spiritualtourstoindia.com).
 
 ### CSS & Font Dependencies
 
@@ -103,3 +103,18 @@ Native Web APIs are used, including Smooth Scroll API, DOM Manipulation APIs, an
   - Added missing `.hover\:text-orange-600:hover` CSS class
   - Text now properly displays in orange on white background when hovered
   - Fixed in: assets/css/custom.css
+
+- **SEO Enhancement - OG Image Created**: Professional Open Graph image for social sharing
+  - Created 1200×630px OG image from hero temple photo (international travelers)
+  - Optimized to 214KB JPEG (under 500KB SEO best practice)
+  - Added complete OG meta tags: image width, height, alt text, site name
+  - Added Twitter Card image and alt text tags
+  - Added robots meta tag (index, follow)
+  - Image path: `/assets/og-image.jpg`
+  - Improves social sharing appearance on Facebook, LinkedIn, Twitter, WhatsApp
+
+- **Email Migration**: Updated primary contact email across all assets
+  - Changed from: namaste@smukti.com
+  - Changed to: hello@spiritualtourstoindia.com
+  - Updated in: index.html (Schema markup, form action, mailto links), README.md, replit.md
+  - FormSubmit.co contact form now sends to new email address

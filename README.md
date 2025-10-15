@@ -55,7 +55,7 @@ Deployed via Cloudflare Pages with auto-deployment from GitHub main branch.
 
 ## Contact
 
-- Email: namaste@smukti.com
+- Email: hello@spiritualtourstoindia.com
 - WhatsApp: +918807070819
 - Booking: https://calendly.com/sabin-smukti/30min
 

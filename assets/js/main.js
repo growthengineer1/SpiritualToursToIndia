@@ -69,18 +69,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form Validation
+    // Form Submission with AJAX (stays on page)
     const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
             // Basic validation
             if (name === '' || email === '' || message === '') {
-                e.preventDefault();
                 alert('Please fill in all required fields.');
                 return false;
             }
@@ -88,12 +90,52 @@ document.addEventListener('DOMContentLoaded', function() {
             // Email format validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                e.preventDefault();
                 alert('Please enter a valid email address.');
                 return false;
             }
 
-            // If validation passes, form will submit normally
+            // Submit form via AJAX
+            const formData = new FormData(contactForm);
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    formSuccess.classList.remove('hidden');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    // Hide success message after 10 seconds
+                    setTimeout(() => {
+                        formSuccess.classList.add('hidden');
+                    }, 10000);
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
+                }
+            })
+            .catch(error => {
+                alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
+            })
+            .finally(() => {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            });
         });
     }
 

@@ -10,6 +10,18 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
+### October 15, 2025 - Form Fix & Image Optimization
+
+- **Contact Form AJAX Submission**: Fixed form navigation issue to keep users on site
+  - Removed external redirect to non-existent /thank-you page
+  - Implemented AJAX form submission using Fetch API
+  - Added success message that displays on same page after submission
+  - Form now shows "Sending..." state during submission
+  - Success message auto-hides after 10 seconds
+  - Form resets automatically after successful submission
+  - Prevents navigation to FormSubmit's external confirmation page
+  - Improved user experience by keeping users on spiritualtourstoindia.com
+
 ### October 15, 2025 - Image Optimization & Path Fix for Production
 
 - **Destination Image Replacement**: Fixed incorrect destination images with accurate stock photos

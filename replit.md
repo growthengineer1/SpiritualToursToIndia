@@ -11,6 +11,15 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 ## Recent Changes
 
 ### October 15, 2025 - Image Optimization & Path Fix for Production
+
+- **CRITICAL CSS Bug Fix - Images Not Displaying**: Fixed CSS rule that was hiding ALL images on the site
+  - **Problem**: `img[loading="lazy"] { opacity: 0; }` rule made all lazy-loaded images invisible
+  - **Root Cause**: CSS expected JavaScript to add `.loaded` class, but no JS existed to do this
+  - **Solution**: Removed the opacity: 0 rule from custom.css (lines 98-100)
+  - **Impact**: All images now display correctly (hero, destinations, tours, testimonials, blog posts)
+  - **Result**: Verified all images loading with 200 status codes in server logs
+  - Images still lazy-load natively via browser (no fade-in animation, but functional)
+
 - **Image Optimization - WebP Conversion**: Resolved mobile loading issues with oversized images
   - Converted 7 blog images from PNG to WebP format
   - File size reduction: 712KB-2.0MB → 23KB-138KB (90-95% smaller)

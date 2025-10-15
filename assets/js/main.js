@@ -94,9 +94,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             }
 
-            // Submit form via AJAX
-            const formData = new FormData(contactForm);
+            // Collect form data as JSON to match Worker expectations
             const submitButton = contactForm.querySelector('button[type="submit"]');
+            
+            const jsonData = {
+                name: name,
+                email: email,
+                phone: document.getElementById('phone')?.value || '',
+                tour: document.getElementById('tour-interest')?.value || '',
+                dates: document.getElementById('travel-dates')?.value || '',
+                message: message
+            };
             
             // Disable button and show loading state
             submitButton.disabled = true;
@@ -104,7 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             fetch(contactForm.action, {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
             })
             .then(response => response.json())
             .then(data => {

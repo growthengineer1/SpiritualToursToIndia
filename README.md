@@ -59,13 +59,9 @@ Contact form uses a **Cloudflare Worker** with **SendGrid REST API** for email d
 
 - **Worker Endpoint**: `spiritualtourstoindiaemail.sabin.workers.dev`
 - **Email From**: `namaste@smukti.com`
-- **Email To**: `hello@spiritualtourstoindia.com`
-- **API**: SendGrid (API key stored as Cloudflare environment variable)
-
-**To deploy the Worker:**
-1. Copy code from `worker.js` 
-2. Paste into Cloudflare Workers dashboard or deploy via Wrangler CLI
-3. Ensure `SENDGRID_API_KEY` environment variable is set in Cloudflare
+- **Email To**: Currently configured to send to `namaste@smukti.com`
+- **API**: SendGrid (API key stored as Cloudflare environment variable `SENDGRID_API_KEY`)
+- **Format**: Form sends JSON data with fields: name, email, phone, tour, dates, message
 
 ## Contact
 

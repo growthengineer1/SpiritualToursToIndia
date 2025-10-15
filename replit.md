@@ -2,146 +2,7 @@
 
 ## Overview
 
-A high-converting, SEO-optimized static HTML landing page designed to help international travelers (primarily from USA, Canada, UK, Europe, and Australia) research and plan spiritual tours to India. The site serves as an informational resource that connects users with tour organizers through consultation bookings and contact forms.
-
-**Primary Purpose**: Generate qualified leads for spiritual tour packages by providing curated itineraries, destination guides, and travel resources.
-
-**Target Keywords**: spiritual tours to india, spiritual tour to india, spiritual travel india, spiritual journey to india, yoga tours india, meditation retreats india, temple tours india
-
-## Recent Changes
-
-### October 15, 2025 - Hero Image Update, SEO Sitemap & Featured Group Tour
-
-- **Hero Banner Image Replaced**: New authentic group photo showing international travelers at South Indian temple
-  - Previous: Indian flag/Varanasi ghats generic image
-  - New: Real photo of foreigners in traditional white clothes with orange garlands at temple ceremony
-  - Better represents target audience (international spiritual travelers)
-  - Shows authentic spiritual experience visitors can expect
-  - Image path: `/attached_assets/Foreigners in South INdia Temple_1760509121835.png`
-
-### October 15, 2025 - SEO Sitemap & Featured Group Tour
-
-- **XML Sitemap Created**: Full sitemap.xml for Google Search Console submission
-  - Includes homepage and all 6 tour detail pages
-  - Properly formatted with absolute URLs, lastmod dates, changefreq, priority
-  - Accessible at: https://spiritualtourstoindia.com/sitemap.xml
-  - robots.txt created with sitemap reference
-  - Ready for Google Search Console submission
-
-- **Featured Group Tour Section Added**: "Discovering Shiva" prominently displayed in Tour Options
-  - Featured badge with star icon to highlight special group tour
-  - Large featured card layout with Nataraja image
-  - Tour highlights: 10-day experience, Chidambaram/Thanjavur/Tiruvannamalai temples, cosmic dance ceremonies
-  - Fixed departure dates displayed: Nov 7-16 2025, Dec 5-14 2025, Jan 21-30 2026, Feb 6-15 2026
-  - Two CTAs: "Book This Tour" (primary orange) and "Learn More" (secondary outline)
-  - Links to: https://smukti.com/spiritual-tours/discovering-shiva
-  - Trust indicator: "Limited spots • Small group (max 12 travelers)"
-  - Responsive design with image on left, content on right
-
-### October 15, 2025 - Tour Page Hero Images & Form Fix
-
-- **Tour Page Hero Images Added**: Fixed missing hero images on all 6 tour detail pages
-  - Buddha Circuit: Bodh Gaya Mahabodhi Temple image (eb689d93.webp)
-  - Golden Triangle: Taj Mahal sunrise image (0255a63b.webp)
-  - South India Temple Tour: Meenakshi Temple colorful gopuram (627dc9f7.webp)
-  - Char Dham Yatra: Badrinath Temple in Himalayas (a920970f.webp)
-  - Karnataka Tour: Hampi Virupaksha Temple ruins (d6c19744.webp)
-  - Tamil Nadu & Kerala: Kerala backwaters houseboat (98a5b663.webp)
-  - All images converted to WebP format and optimized
-  - Added dark overlay (50% opacity) for text readability
-  - Increased hero section height from py-20 to py-32 for more visual impact
-  - All images loading with 200 status codes verified
-
-### October 15, 2025 - Form Fix & Image Optimization
-
-- **Contact Form AJAX Submission**: Fixed form navigation issue to keep users on site
-  - Removed external redirect to non-existent /thank-you page
-  - Implemented AJAX form submission using Fetch API
-  - Added success message that displays on same page after submission
-  - Form now shows "Sending..." state during submission
-  - Success message auto-hides after 10 seconds
-  - Form resets automatically after successful submission
-  - Prevents navigation to FormSubmit's external confirmation page
-  - Improved user experience by keeping users on spiritualtourstoindia.com
-
-### October 15, 2025 - Image Optimization & Path Fix for Production
-
-- **Destination Image Replacement**: Fixed incorrect destination images with accurate stock photos
-  - Replaced 4 destination card images with location-appropriate photos
-  - Varanasi: Changed from VW bus on beach → Ganges ghats with temples (421KB → 279KB WebP)
-  - Rishikesh: Changed from generic mountains → Ganga river in Rishikesh (288KB WebP)  
-  - Bodh Gaya: Changed from Taj Mahal → Mahabodhi Temple (148KB → 62KB WebP)
-  - Haridwar: Changed from India Gate → Ganga Aarti ceremony (367KB WebP)
-  - All images converted to WebP format for optimized file sizes
-  - Stored locally in `attached_assets/stock_images/` with absolute paths
-  - Verified all loading with 200 status codes
-
-- **Tour Itinerary Images Added**: Fixed missing images in tour section
-  - South India Temple Tour: Added Meenakshi Temple image (340KB WebP)
-  - Buddha Circuit Tour: Added Sarnath Buddhist stupa image (276KB WebP)
-  - Both converted to WebP format and hosted locally
-  - Verified all loading with 200 status codes
-
-- **Logo & Favicon Implementation**: Added custom brand logo to site
-  - Generated favicon files in multiple sizes (16x16, 32x32, 192x192, 512x512)
-  - Added favicon link tags to HTML <head> for all devices and browsers
-  - Integrated logo in header alongside site name with proper sizing (48x48px)
-  - Logo features India map with Om symbol and compass in maroon/orange colors
-  - Updated to cropped version removing excess background space (775KB → 324KB)
-  - All assets stored in `assets/images/` directory
-  - Verified favicon and logo loading with 200 status codes
-
-- **New Blog Posts Added**: Expanded Travel Resources section from 10 to 12 blog posts
-  - Added Blog 11: "A Beginner's Guide to Visiting Shiva Temples in South India"
-  - Added Blog 12: "How Indian Spirituality Differs from Western Mindfulness Practices"
-  - Downloaded and optimized 2 new WebP images (340KB and 65KB)
-  - Both blog posts link to corresponding smukti.com blog articles
-  - Verified all images loading with 200 status codes in server logs
-
-- **CRITICAL CSS Bug Fix - Images Not Displaying**: Fixed CSS rule that was hiding ALL images on the site
-  - **Problem**: `img[loading="lazy"] { opacity: 0; }` rule made all lazy-loaded images invisible
-  - **Root Cause**: CSS expected JavaScript to add `.loaded` class, but no JS existed to do this
-  - **Solution**: Removed the opacity: 0 rule from custom.css (lines 98-100)
-  - **Impact**: All images now display correctly (hero, destinations, tours, testimonials, blog posts)
-  - **Result**: Verified all images loading with 200 status codes in server logs
-  - Images still lazy-load natively via browser (no fade-in animation, but functional)
-
-- **Image Optimization - WebP Conversion**: Resolved mobile loading issues with oversized images
-  - Converted 7 blog images from PNG to WebP format
-  - File size reduction: 712KB-2.0MB → 23KB-138KB (90-95% smaller)
-  - Images now load instantly on mobile devices and slow connections
-  - All modern browsers support WebP (Chrome, Safari, Firefox, Edge)
-
-- **Critical Fix - Absolute Image Paths**: Resolved blog images not displaying on production site
-  - Changed all image paths from relative (`attached_assets/...`) to absolute (`/attached_assets/...`)
-  - Fixed 25 image references: 18 stock images (testimonials + blogs 1-3) + 7 blog images (blogs 4-10)
-  - Absolute paths ensure consistent loading across all pages and deployment environments
-  - Images work in development (Python server) and production (Cloudflare Pages)
-  
-- **Blog Images Permissions Fix**: Resolved accessibility issue with blog images in Python HTTP server
-  - Set directory permissions to 755 on `attached_assets/blog_images/`
-  - All 7 blog images now accessible and loading correctly
-  - Verified via server logs (200 status codes)
-  
-- **Image Hosting Architecture Clarification**: 
-  - Confirmed Replit App Storage blueprint is incompatible with static HTML sites (requires Node.js/TypeScript backend)
-  - Current working setup uses local storage + external CDN approach:
-    - 18 stock images in `attached_assets/stock_images/` (testimonials, blog posts 1-3)
-    - 7 blog images in `attached_assets/blog_images/` (blog posts 4-10)
-    - 12 destination/tour images from Unsplash CDN (external)
-  - All images verified working with proper permissions
-
-### October 14, 2025 - Analytics & Asset Optimization
-- **Google Tag Manager Installation**: Implemented GTM container (GTM-T65DHKXL) across entire site for analytics and conversion tracking
-  - Head script installed immediately after `<head>` tag on all pages
-  - Noscript iframe installed immediately after `<body>` tag on all pages
-  - Deployed on: index.html + all 6 tour detail pages (golden-triangle, south-india, karnataka, char-dham, buddha-circuit, tamil-nadu-kerala)
-  
-- **Blog Image Migration**: Migrated 7 blog featured images from external Bubble CDN to local hosting
-  - Downloaded images from smukti.com/bubble.io CDN to `attached_assets/blog_images/`
-  - Updated HTML references from external URLs to local paths
-  - Resolved CORS/security policy blocking issues with external CDN images
-  - Affected images: transportation.png, packing.png, health.png, sacred-architecture.png, visa.png, first-time.png, women-safety.png
+A high-converting, SEO-optimized static HTML landing page designed to help international travelers (primarily from USA, Canada, UK, Europe, and Australia) research and plan spiritual tours to India. The site serves as an informational resource that connects users with tour organizers through consultation bookings and contact forms. The primary purpose is to generate qualified leads for spiritual tour packages by providing curated itineraries, destination guides, and travel resources.
 
 ## User Preferences
 
@@ -151,137 +12,47 @@ Preferred communication style: Simple, everyday language.
 
 ### Frontend Architecture
 
-**Static Site Approach**
-- Pure HTML5/CSS/JavaScript with no build tools or frameworks
-- Mobile-first responsive design using Tailwind CSS utility classes
-- Semantic HTML5 markup for SEO optimization
-- Custom CSS extends Tailwind for specific design requirements
-
-**Rationale**: Static HTML provides maximum performance, simplicity, and SEO benefits for a landing page. No backend processing needed since this is purely informational with external service integrations for forms and bookings.
-
-### Content Structure
-
-**12-Section Landing Page Layout**
-1. Sticky header navigation
-2. Hero section with primary CTA
-3. Value proposition (Why India)
-4. Destination showcase
-5. Curated tour itineraries
-6. Spiritual experience types
-7. Social proof (testimonials)
-8. Travel resources/blog preview
-9. FAQ accordion
-10. Consultation CTA
-11. Contact form
-12. Footer
-
-**Design Pattern**: Long-form landing page optimized for conversion, with progressive disclosure of information and multiple conversion points throughout the scroll journey.
+The project uses a static site approach with pure HTML5/CSS/JavaScript, no build tools or frameworks, and a mobile-first responsive design using Tailwind CSS utility classes. Semantic HTML5 markup is used for SEO optimization, and custom CSS extends Tailwind for specific design requirements. The content is structured as a 12-section landing page, optimized for conversion with progressive disclosure of information and multiple conversion points.
 
 ### Styling Approach
 
-**Tailwind CSS via CDN**
-- Utility-first CSS framework loaded from Cloudflare CDN
-- No build process required
-- Custom CSS file (`assets/css/custom.css`) for extended styles beyond Tailwind utilities
-
-**Typography Stack**:
-- Headings: 'Lora' (serif, elegant for spiritual theme)
-- Body: 'Inter' (sans-serif, optimized for readability)
-- Loaded via Google Fonts
-
-**Rationale**: CDN approach eliminates build complexity while providing full Tailwind functionality. Custom fonts enhance brand personality appropriate for spiritual/cultural content.
+Tailwind CSS is loaded via CDN, eliminating the need for a build process. Custom CSS is used for extended styles. Typography uses 'Lora' (serif) for headings and 'Inter' (sans-serif) for body text, loaded via Google Fonts.
 
 ### Interactive Features
 
-**Vanilla JavaScript Implementation**
-- Mobile hamburger menu toggle
-- FAQ accordion with smooth animations
-- Smooth scroll with header offset compensation
-- No framework dependencies
-
-**Animation Strategy**: CSS transitions for performance, JavaScript only for state management. Scroll-reveal animations use CSS transforms for GPU acceleration.
+Interactive features are implemented with vanilla JavaScript for mobile menu toggles, FAQ accordions, and smooth scrolling. CSS transitions are used for performance, with JavaScript managing state.
 
 ### SEO Architecture
 
-**On-Page Optimization**
-- Semantic HTML5 structure with proper heading hierarchy
-- Comprehensive meta tags (description, keywords, Open Graph, Twitter Cards)
-- Schema.org structured data (TravelAgency type)
-- Canonical URL specification
-- Strategic internal anchor linking with scroll offset
-
-**Rationale**: Static HTML enables perfect SEO control. Schema markup helps search engines understand the business type and improves rich snippet potential.
+On-page optimization includes semantic HTML5 with proper heading hierarchy, comprehensive meta tags (description, keywords, Open Graph, Twitter Cards), Schema.org structured data (TravelAgency type), canonical URL specification, and strategic internal anchor linking.
 
 ### Asset Management
 
-**Image Strategy**
-- Primary images hosted on Supabase storage
-- Optimized for web delivery
-- Responsive image considerations for mobile
-
-**Rationale**: Supabase provides reliable CDN-backed storage without managing separate image infrastructure. Keeps repository lightweight.
+Images are hosted on Supabase storage, optimized for web delivery, and consider responsive design for mobile.
 
 ## External Dependencies
 
 ### Hosting & Deployment
 
-**Cloudflare Pages**
-- Git-based continuous deployment
-- Automatic deployment triggered by GitHub pushes
-- Global CDN distribution
-- SSL/TLS included
-
-**GitHub Repository**
-- Source code version control
-- Triggers Cloudflare Pages deployments
-
-**Rationale**: Cloudflare Pages offers zero-config deployment with excellent performance for static sites. GitHub integration enables version control and automated deployment workflows.
+**Cloudflare Pages** is used for Git-based continuous deployment, triggered by GitHub pushes, with global CDN distribution and SSL/TLS.
+**GitHub Repository** provides source code version control.
 
 ### Domain & DNS
 
-**Cloudflare DNS**
-- Domain: spiritualtourstoindia.com
-- DNS management through Cloudflare
+**Cloudflare DNS** manages the domain: spiritualtourstoindia.com.
 
 ### Third-Party Service Integrations
 
-**Calendly**
-- Consultation booking system
-- Link: https://calendly.com/sabin-smukti/30min
-- Opens in new tab for 30-minute consultation scheduling
-
-**WhatsApp Business**
-- Quick messaging option for user inquiries
-- Phone: +918807070819
-- Direct mobile communication channel
-
-**Supabase**
-- Image storage and delivery
-- No database or backend API usage
-- CDN-backed asset hosting only
-
-**Email Service**
-- Contact email: namaste@smukti.com
-- Form submissions likely handled client-side or via external form service
+*   **Calendly**: For consultation bookings (https://calendly.com/sabin-smukti/30min).
+*   **WhatsApp Business**: For quick messaging (+918807070819).
+*   **Supabase**: Used solely for image storage and delivery (CDN-backed asset hosting).
+*   **Email Service**: For contact (namaste@smukti.com).
 
 ### CSS & Font Dependencies
 
-**Tailwind CSS**
-- Version: 2.2.19
-- Delivery: Cloudflare CDN
-- URL: https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css
-
-**Google Fonts**
-- Lora (serif): weights 400, 600, 700
-- Inter (sans-serif): weights 300, 400, 500, 600
-- Preconnect optimization for performance
-
-**Rationale**: CDN delivery eliminates build tools while maintaining fast load times. Font preconnect reduces latency for typography loading.
+*   **Tailwind CSS**: Version 2.2.19, delivered via Cloudflare CDN.
+*   **Google Fonts**: Lora (serif) and Inter (sans-serif), with preconnect optimization.
 
 ### Browser APIs
 
-**Native Web APIs Used**
-- Smooth Scroll API
-- DOM Manipulation APIs
-- Event Listeners (click, scroll)
-- LocalStorage (potential for form data persistence)
+Native Web APIs are used, including Smooth Scroll API, DOM Manipulation APIs, and Event Listeners (click, scroll).

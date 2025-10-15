@@ -10,6 +10,15 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
+### October 15, 2025 - Hero Image Update, SEO Sitemap & Featured Group Tour
+
+- **Hero Banner Image Replaced**: New authentic group photo showing international travelers at South Indian temple
+  - Previous: Indian flag/Varanasi ghats generic image
+  - New: Real photo of foreigners in traditional white clothes with orange garlands at temple ceremony
+  - Better represents target audience (international spiritual travelers)
+  - Shows authentic spiritual experience visitors can expect
+  - Image path: `/attached_assets/Foreigners in South INdia Temple_1760509121835.png`
+
 ### October 15, 2025 - SEO Sitemap & Featured Group Tour
 
 - **XML Sitemap Created**: Full sitemap.xml for Google Search Console submission

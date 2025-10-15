@@ -10,6 +10,20 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
+### October 15, 2025 - Tour Page Hero Images & Form Fix
+
+- **Tour Page Hero Images Added**: Fixed missing hero images on all 6 tour detail pages
+  - Buddha Circuit: Bodh Gaya Mahabodhi Temple image (eb689d93.webp)
+  - Golden Triangle: Taj Mahal sunrise image (0255a63b.webp)
+  - South India Temple Tour: Meenakshi Temple colorful gopuram (627dc9f7.webp)
+  - Char Dham Yatra: Badrinath Temple in Himalayas (a920970f.webp)
+  - Karnataka Tour: Hampi Virupaksha Temple ruins (d6c19744.webp)
+  - Tamil Nadu & Kerala: Kerala backwaters houseboat (98a5b663.webp)
+  - All images converted to WebP format and optimized
+  - Added dark overlay (50% opacity) for text readability
+  - Increased hero section height from py-20 to py-32 for more visual impact
+  - All images loading with 200 status codes verified
+
 ### October 15, 2025 - Form Fix & Image Optimization
 
 - **Contact Form AJAX Submission**: Fixed form navigation issue to keep users on site

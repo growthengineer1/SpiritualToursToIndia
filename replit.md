@@ -12,6 +12,13 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ### October 15, 2025 - Image Optimization & Path Fix for Production
 
+- **New Blog Posts Added**: Expanded Travel Resources section from 10 to 12 blog posts
+  - Added Blog 11: "A Beginner's Guide to Visiting Shiva Temples in South India"
+  - Added Blog 12: "How Indian Spirituality Differs from Western Mindfulness Practices"
+  - Downloaded and optimized 2 new WebP images (340KB and 65KB)
+  - Both blog posts link to corresponding smukti.com blog articles
+  - Verified all images loading with 200 status codes in server logs
+
 - **CRITICAL CSS Bug Fix - Images Not Displaying**: Fixed CSS rule that was hiding ALL images on the site
   - **Problem**: `img[loading="lazy"] { opacity: 0; }` rule made all lazy-loaded images invisible
   - **Root Cause**: CSS expected JavaScript to add `.loaded` class, but no JS existed to do this

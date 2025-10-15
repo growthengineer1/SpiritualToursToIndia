@@ -46,7 +46,11 @@ Images are hosted on Supabase storage, optimized for web delivery, and consider 
 *   **Calendly**: For consultation bookings (https://calendly.com/sabin-smukti/30min).
 *   **WhatsApp Business**: For quick messaging (+918807070819).
 *   **Supabase**: Used solely for image storage and delivery (CDN-backed asset hosting).
-*   **Email Service**: For contact (hello@spiritualtourstoindia.com).
+*   **Email Service**: Cloudflare Worker + SendGrid REST API
+    - Worker endpoint: spiritualtourstoindiaemail.sabin.workers.dev
+    - Sends from: namaste@smukti.com
+    - Delivers to: hello@spiritualtourstoindia.com
+    - API key stored as Cloudflare environment variable (SENDGRID_API_KEY)
 
 ### CSS & Font Dependencies
 
@@ -127,3 +131,16 @@ Native Web APIs are used, including Smooth Scroll API, DOM Manipulation APIs, an
   - Added 3 new destinations: Hampi (UNESCO ruins, 337KB→163KB WebP), Tiruvannamalai (Arunachala Hill, JPEG→24KB WebP), Kanyakumari (southernmost tip)
   - Updated sitemap.xml with all 9 destination pages (priority 0.7)
   - All pages feature authentic spiritual content for international travelers with internal linking to related tours
+
+### October 15, 2025 - Cloudflare Worker Email Integration
+
+- **Contact Form Migration**: Replaced FormSubmit.co with Cloudflare Worker + SendGrid
+  - Created `worker.js` with SendGrid REST API integration
+  - Worker endpoint: spiritualtourstoindiaemail.sabin.workers.dev
+  - Sends formatted HTML emails from namaste@smukti.com to hello@spiritualtourstoindia.com
+  - API key stored securely as Cloudflare environment variable
+  - Updated contact form in index.html to POST to Worker endpoint
+  - Enhanced JavaScript to handle JSON responses from Worker
+  - Added CORS support for cross-origin requests
+  - Improved error handling with specific error messages
+  - Professional email template with branded styling

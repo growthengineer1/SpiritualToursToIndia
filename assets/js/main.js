@@ -104,13 +104,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             fetch(contactForm.action, {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: formData
             })
-            .then(response => {
-                if (response.ok) {
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
                     // Show success message
                     formSuccess.classList.remove('hidden');
                     
@@ -125,10 +123,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         formSuccess.classList.add('hidden');
                     }, 10000);
                 } else {
-                    alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
+                    alert(data.error || 'Oops! There was a problem submitting your form. Please try again or contact us directly.');
                 }
             })
             .catch(error => {
+                console.error('Form submission error:', error);
                 alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
             })
             .finally(() => {

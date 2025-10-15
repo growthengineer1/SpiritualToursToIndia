@@ -19,7 +19,7 @@ This landing page helps users plan their spiritual journey and connects them wit
 - Fully responsive design (mobile-first approach)
 - SEO-optimized with meta tags and schema markup
 - Interactive FAQ accordion
-- Contact form with validation
+- Contact form with Cloudflare Worker + SendGrid email delivery
 - Mobile navigation menu
 - Smooth scrolling
 - WhatsApp and Calendly integration
@@ -52,6 +52,20 @@ npx serve
 ## Deployment
 
 Deployed via Cloudflare Pages with auto-deployment from GitHub main branch.
+
+## Email Integration
+
+Contact form uses a **Cloudflare Worker** with **SendGrid REST API** for email delivery:
+
+- **Worker Endpoint**: `spiritualtourstoindiaemail.sabin.workers.dev`
+- **Email From**: `namaste@smukti.com`
+- **Email To**: `hello@spiritualtourstoindia.com`
+- **API**: SendGrid (API key stored as Cloudflare environment variable)
+
+**To deploy the Worker:**
+1. Copy code from `worker.js` 
+2. Paste into Cloudflare Workers dashboard or deploy via Wrangler CLI
+3. Ensure `SENDGRID_API_KEY` environment variable is set in Cloudflare
 
 ## Contact
 

@@ -1,0 +1,175 @@
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request, event))
+})
+
+async function handleRequest(request, event) {
+  // Handle CORS preflight
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+    })
+  }
+
+  // Only allow POST
+  if (request.method !== 'POST') {
+    return new Response(JSON.stringify({ 
+      success: false, 
+      error: 'Method not allowed' 
+    }), {
+      status: 405,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+    })
+  }
+
+  try {
+    const formData = await request.json()
+    
+    // Validate
+    if (!formData.name || !formData.email || !formData.message) {
+      return new Response(JSON.stringify({ 
+        success: false, 
+        error: 'Missing required fields' 
+      }), {
+        status: 400,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      })
+    }
+
+    // Send email
+    const result = await sendEmail(formData, event.env)
+    
+    if (result.success) {
+      return new Response(JSON.stringify({ 
+        success: true,
+        message: 'Email sent successfully!' 
+      }), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      })
+    } else {
+      return new Response(JSON.stringify({ 
+        success: false,
+        error: result.error || 'Failed to send email'
+      }), {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      })
+    }
+    
+  } catch (error) {
+    console.error('Worker error:', error)
+    return new Response(JSON.stringify({ 
+      success: false,
+      error: 'Server error: ' + error.message
+    }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+    })
+  }
+}
+
+async function sendEmail(formData, env) {
+  const API_KEY = env.SENDGRID_API_KEY
+  
+  // Debug
+  console.log('Checking SendGrid API Key...')
+  console.log('API Key exists:', !!API_KEY)
+  console.log('API Key starts with SG:', API_KEY?.startsWith('SG.'))
+  
+  if (!API_KEY) {
+    console.error('SendGrid API key not found in environment')
+    return { success: false, error: 'API key not configured' }
+  }
+  
+  if (!API_KEY.startsWith('SG.')) {
+    console.error('SendGrid API key format is incorrect')
+    return { success: false, error: 'API key format invalid' }
+  }
+  
+  const emailBody = `
+New Contact Form Submission from Spiritual Tours to India
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Preferred Tour: ${formData.tour || 'Not specified'}
+Preferred Dates: ${formData.dates || 'Not specified'}
+
+Message:
+${formData.message}
+
+---
+Submitted from: spiritualtourstoindia.com
+Time: ${new Date().toISOString()}
+  `.trim()
+
+  try {
+    console.log('Sending request to SendGrid...')
+    
+    const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        personalizations: [{
+          to: [{ email: 'namaste@smukti.com' }],
+          subject: `New Inquiry: ${formData.name} - ${formData.tour || 'General'}`
+        }],
+        from: {
+          email: 'namaste@smukti.com',
+          name: 'Spiritual Tours to India'
+        },
+        reply_to: {
+          email: formData.email,
+          name: formData.name
+        },
+        content: [{
+          type: 'text/plain',
+          value: emailBody
+        }]
+      })
+    })
+
+    console.log('SendGrid response status:', response.status)
+    
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error('SendGrid error response:', errorText)
+      return { 
+        success: false, 
+        error: `SendGrid returned error ${response.status}` 
+      }
+    }
+
+    console.log('Email sent successfully!')
+    return { success: true }
+    
+  } catch (error) {
+    console.error('SendGrid request failed:', error)
+    return { 
+      success: false, 
+      error: 'Network error: ' + error.message 
+    }
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Worker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        button {
+            background: #ea580c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c2410c;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background: #f9fafb;
+        }
+        .success {
+            border-color: #10b981 !important;
+            background: #d1fae5 !important;
+        }
+        .error {
+            border-color: #ef4444 !important;
+            background: #fee2e2 !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Cloudflare Worker Email</h1>
+    <p>Click the button below to test if your Worker can send emails:</p>
+    
+    <button onclick="testWorker()">🧪 Test Worker Now</button>
+    
+    <div id="result"></div>
+
+    <script>
+        async function testWorker() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>⏳ Testing Worker...</p>';
+            resultDiv.className = '';
+            
+            try {
+                const response = await fetch('https://spiritualtourstoindiaemail.sabin.workers.dev', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: 'Test User',
+                        email: 'test@spiritualtourstoindia.com',
+                        phone: '+1 234 567 8900',
+                        tour: 'Test Tour',
+                        dates: 'Test Dates',
+                        message: 'This is a test message to verify the Worker and SendGrid integration.'
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.className = 'success';
+                    resultDiv.innerHTML = `
+                        <h2>✅ SUCCESS!</h2>
+                        <p><strong>Worker is working correctly!</strong></p>
+                        <p>Message: ${data.message}</p>
+                        <p>Check your email inbox at <strong>namaste@smukti.com</strong> for the test email.</p>
+                    `;
+                } else {
+                    resultDiv.className = 'error';
+                    resultDiv.innerHTML = `
+                        <h2>❌ Worker Error</h2>
+                        <p><strong>Error:</strong> ${data.error}</p>
+                        <hr>
+                        <h3>Common Fixes:</h3>
+                        <ul>
+                            <li>If "API key not configured" → SENDGRID_API_KEY not set in Production</li>
+                            <li>If "SendGrid error 401" → API key is invalid or expired</li>
+                            <li>If "Missing required fields" → Form data format issue</li>
+                        </ul>
+                    `;
+                }
+                
+                // Show raw response for debugging
+                resultDiv.innerHTML += `<hr><details><summary>Raw Response (click to expand)</summary><pre>${JSON.stringify(data, null, 2)}</pre></details>`;
+                
+            } catch (error) {
+                resultDiv.className = 'error';
+                resultDiv.innerHTML = `
+                    <h2>❌ Connection Error</h2>
+                    <p><strong>Error:</strong> ${error.message}</p>
+                    <p>The Worker might not be deployed or there's a network issue.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

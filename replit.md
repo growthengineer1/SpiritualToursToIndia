@@ -10,6 +10,18 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
+### October 15, 2025 - Featured Group Tour & Tour Page Hero Images
+
+- **Featured Group Tour Section Added**: "Discovering Shiva" prominently displayed in Tour Options
+  - Featured badge with star icon to highlight special group tour
+  - Large featured card layout with Nataraja image
+  - Tour highlights: 10-day experience, Chidambaram/Thanjavur/Madurai temples, cosmic dance ceremonies
+  - Fixed departure dates displayed: Nov 7-16 2025, Dec 5-14 2025, Jan 21-30 2026, Feb 6-15 2026
+  - Two CTAs: "Book This Tour" (primary orange) and "Learn More" (secondary outline)
+  - Links to: https://smukti.com/spiritual-tours/discovering-shiva
+  - Trust indicator: "Limited spots • Small group (max 12 travelers)"
+  - Responsive design with image on left, content on right
+
 ### October 15, 2025 - Tour Page Hero Images & Form Fix
 
 - **Tour Page Hero Images Added**: Fixed missing hero images on all 6 tour detail pages

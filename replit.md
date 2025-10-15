@@ -10,7 +10,13 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
-### October 15, 2025 - Image Hosting & Permissions Fix
+### October 15, 2025 - Image Path Fix for Production Deployment
+- **Critical Fix - Absolute Image Paths**: Resolved blog images not displaying on production site
+  - Changed all image paths from relative (`attached_assets/...`) to absolute (`/attached_assets/...`)
+  - Fixed 25 image references: 18 stock images (testimonials + blogs 1-3) + 7 blog images (blogs 4-10)
+  - Absolute paths ensure consistent loading across all pages and deployment environments
+  - Images work in development (Python server) and production (Cloudflare Pages)
+  
 - **Blog Images Permissions Fix**: Resolved accessibility issue with blog images in Python HTTP server
   - Set directory permissions to 755 on `attached_assets/blog_images/`
   - All 7 blog images now accessible and loading correctly

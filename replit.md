@@ -10,7 +10,14 @@ A high-converting, SEO-optimized static HTML landing page designed to help inter
 
 ## Recent Changes
 
-### October 15, 2025 - Featured Group Tour & Tour Page Hero Images
+### October 15, 2025 - SEO Sitemap & Featured Group Tour
+
+- **XML Sitemap Created**: Full sitemap.xml for Google Search Console submission
+  - Includes homepage and all 6 tour detail pages
+  - Properly formatted with absolute URLs, lastmod dates, changefreq, priority
+  - Accessible at: https://spiritualtourstoindia.com/sitemap.xml
+  - robots.txt created with sitemap reference
+  - Ready for Google Search Console submission
 
 - **Featured Group Tour Section Added**: "Discovering Shiva" prominently displayed in Tour Options
   - Featured badge with star icon to highlight special group tour

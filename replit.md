@@ -63,6 +63,31 @@ Native Web APIs are used, including Smooth Scroll API, DOM Manipulation APIs, an
 
 ## Recent Changes
 
+### December 6, 2025 - Lead Management System & Tour Pages
+
+- **FastAPI Backend with PostgreSQL**: Built complete lead management API
+  - POST `/api/leads` endpoint for tour enquiry submissions
+  - PostgreSQL database with leads table (UUID id, timestamps, all enquiry fields)
+  - Indices on email and created_at for performance
+  - Database URL from environment variable
+
+- **18 New Tour Detail Pages Created**: Full tour catalog with enquiry forms
+  - **Destination Tours (7)**: Varanasi Spirituality, Rishikesh Yoga, Delhi-Uttarakhand, Golden Triangle Spiritual, Goa Wellness, Kerala Ayurveda, Himalayan Trek
+  - **Transformation Tours (4)**: Women Rising, Love Alchemy, Grieving Grace, Chakra Awakening
+  - **Creative & Healing Tours (4)**: Sound Healing, Sacred Feminine Cycle, Creative Awakening, Ancestral Healing
+  - **Specialty Tours (3)**: Sacred Geometry, Festival Tours, Silver Years Awakening
+  - Each page: SEO meta tags, hero section, tour highlights, pricing, itinerary, embedded enquiry form
+  - Inline JavaScript handles form submission to `/api/leads` with loading states and success messaging
+
+- **Dual Email Notifications**: Tour enquiries sent to both recipients
+  - namaste@smukti.com and sabin@smukti.com receive all enquiries
+  - Via Cloudflare Worker + SendGrid integration
+  - Formatted email with lead details, tour info, and source URL
+
+- **Sitemap Updated**: All 18 new tour pages added with proper SEO metadata
+  - Priority 0.9 for destination tours, 0.8 for specialty tours
+  - lastmod dates set to December 6, 2025
+
 ### October 15, 2025 - Image Optimizations & Updates
 
 - **Himalayan Sanctuaries Image Updated**: Replaced with stunning Kedarnath temple photo

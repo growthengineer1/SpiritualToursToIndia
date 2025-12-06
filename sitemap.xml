@@ -123,6 +123,14 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Essential Information -->
+  <url>
+    <loc>https://spiritualtourstoindia.com/essential-trip-info.html</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
   <!-- Legacy Tours -->
   <url>
     <loc>https://spiritualtourstoindia.com/tours/golden-triangle.html</loc>

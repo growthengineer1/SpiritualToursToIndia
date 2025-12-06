@@ -88,6 +88,15 @@ Native Web APIs are used, including Smooth Scroll API, DOM Manipulation APIs, an
   - Priority 0.9 for destination tours, 0.8 for specialty tours
   - lastmod dates set to December 6, 2025
 
+- **Essential Trip Information Page Created**: Comprehensive travel preparation guide
+  - Covers: itinerary changes policy, optional activities, passport/visa requirements
+  - Health information: mosquito-borne illnesses, air pollution, water safety, vaccines
+  - Food & dietary requirements, accommodation details, transport in India
+  - Group travel guidelines, solo/LGBTQIA+ traveller info, travel insurance requirements
+  - Responsible travel commitment
+  - Link added to all 24 tour pages above the enquiry form
+  - Added to sitemap.xml with proper SEO metadata
+
 ### October 15, 2025 - Image Optimizations & Updates
 
 - **Himalayan Sanctuaries Image Updated**: Replaced with stunning Kedarnath temple photo

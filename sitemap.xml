@@ -1,227 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://spiritualtourstoindia.com/</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Destination Tours -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/varanasi-spirituality.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/rishikesh-yoga.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/delhi-uttarakhand.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/golden-triangle-spiritual.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/goa-wellness.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/kerala-ayurveda.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/himalayan-trek.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Transformation Tours -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/women-rising.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/love-alchemy.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/grieving-grace.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/chakra-awakening.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Creative & Healing Tours -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/sound-healing.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/sacred-feminine-cycle.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/creative-awakening.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/ancestral-healing.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Specialty Tours -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/sacred-geometry.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/festival-tours.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/silver-years.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Essential Information -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/essential-trip-info.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Legacy Tours -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/golden-triangle.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/south-india.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/buddha-circuit.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/char-dham.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/karnataka.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/tours/tamil-nadu-kerala.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
+  <url><loc>https://spiritualtourstoindia.com/</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- Destination tours -->
+  <url><loc>https://spiritualtourstoindia.com/tours/varanasi-spirituality.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/rishikesh-yoga.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/delhi-uttarakhand.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/goa-wellness.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/kerala-ayurveda.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/himalayan-trek.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Transformation tours -->
+  <url><loc>https://spiritualtourstoindia.com/tours/love-alchemy.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/grieving-grace.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/chakra-awakening.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Creative and healing tours -->
+  <url><loc>https://spiritualtourstoindia.com/tours/sound-healing.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/sacred-feminine-cycle.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/ancestral-healing.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Specialty and legacy tours -->
+  <url><loc>https://spiritualtourstoindia.com/tours/sacred-geometry.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/festival-tours.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/golden-triangle.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/south-india.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/buddha-circuit.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/char-dham.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/karnataka.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/tours/tamil-nadu-kerala.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Essential information and policies -->
+  <url><loc>https://spiritualtourstoindia.com/essential-trip-info.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/privacy-policy.html</loc><lastmod>2026-09-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/terms.html</loc><lastmod>2026-09-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
   <!-- Destinations -->
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/varanasi.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/rishikesh.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/bodh-gaya.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/haridwar.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/south-india.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/himalayan-sanctuaries.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/hampi.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/tiruvannamalai.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://spiritualtourstoindia.com/destinations/kanyakumari.html</loc>
-    <lastmod>2025-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/varanasi.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/rishikesh.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/bodh-gaya.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/haridwar.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/south-india.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/himalayan-sanctuaries.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/hampi.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/tiruvannamalai.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spiritualtourstoindia.com/destinations/kanyakumari.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

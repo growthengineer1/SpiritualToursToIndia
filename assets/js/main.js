@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form Submission with AJAX (stays on page)
     const contactForm = document.getElementById('contact-form');
     const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -79,31 +80,40 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            // Basic validation
-            if (name === '' || email === '' || message === '') {
-                alert('Please fill in all required fields.');
-                return false;
-            }
-
-            // Email format validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            // Collect form data as JSON to match Worker expectations
+            const website = document.getElementById('website')?.value.trim();
             const submitButton = contactForm.querySelector('button[type="submit"]');
-            
+
+            formSuccess.classList.add('hidden');
+            formError.classList.add('hidden');
+
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return false;
+            }
+
+            // Silently treat automated submissions as successful without sending
+            // unsupported honeypot data to the lead API.
+            if (website) {
+                contactForm.reset();
+                formSuccess.classList.remove('hidden');
+                formSuccess.focus();
+                return false;
+            }
+
+            const nameParts = name.split(/\s+/);
             const jsonData = {
-                name: name,
+                tour_title: document.getElementById('tour-interest')?.value || 'Custom Tour / General Enquiry',
+                first_name: nameParts[0],
+                last_name: nameParts.slice(1).join(' ') || 'Not provided',
                 email: email,
-                phone: document.getElementById('phone')?.value || '',
-                tour: document.getElementById('tour-interest')?.value || '',
-                dates: document.getElementById('travel-dates')?.value || '',
-                message: message
+                mobile: document.getElementById('phone')?.value.trim() || null,
+                tour_dates_preferred: document.getElementById('travel-dates')?.value.trim() || null,
+                quantity: 1,
+                currency: 'USD',
+                type: 'SpiritualToursToIndia',
+                source_url: window.location.href,
+                message: document.getElementById('message')?.value.trim() || null,
+                website: website || null
             };
             
             // Disable button and show loading state
@@ -117,7 +127,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(jsonData)
             })
-            .then(response => response.json())
+            .then(async response => {
+                const data = await response.json().catch(() => ({}));
+                if (!response.ok) {
+                    throw new Error(data.detail || data.message || 'We could not submit your enquiry. Please try again.');
+                }
+                return data;
+            })
             .then(data => {
                 if (data.success) {
                     // Show success message
@@ -127,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     contactForm.reset();
                     
                     // Scroll to success message
+                    formSuccess.focus();
                     formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                     
                     // Hide success message after 10 seconds
@@ -134,12 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         formSuccess.classList.add('hidden');
                     }, 10000);
                 } else {
-                    alert(data.error || 'Oops! There was a problem submitting your form. Please try again or contact us directly.');
+                    throw new Error(data.error || data.message || 'We could not submit your enquiry. Please try again or contact us directly.');
                 }
             })
             .catch(error => {
                 console.error('Form submission error:', error);
-                alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
+                formError.textContent = error.message || 'We could not submit your enquiry. Please try again or contact us directly.';
+                formError.classList.remove('hidden');
+                formError.focus();
             })
             .finally(() => {
                 // Re-enable button
